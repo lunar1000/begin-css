@@ -88,7 +88,8 @@ p {
 }
 /* CONTENT STYLE */
 .content-container {
-  flex-grow: 1;
+  display: flex;
+  flex: 1 1 auto;
   padding-top: 10vh;
   width: 100%;
 }
@@ -128,7 +129,7 @@ p {
   border: 10px solid;
   border-color: #fff transparent transparent;
   bottom: 2vh;
-  content: "";
+  content: '';
   height: 0;
   left: 50%;
   position: absolute;
@@ -160,10 +161,7 @@ p {
   color: #fff;
 }
 /* HOMEPAGE STYLES */
-/* home callout */
 .home-callout {
-  /* align-items: flex-start; */
-  /* align-items: flex-end; */
   align-items: center;
   background-color: #000;
   color: #fff;
@@ -175,15 +173,13 @@ p {
   margin-top: 1em;
 }
 .home-callout .callout-title {
-  flex-basis: 0;
-  flex-grow: 1;
+  flex: 1 1 0;
   font-size: 5.75vw;
   text-align: right;
   text-transform: uppercase;
 }
 .callout-copy {
-  flex-basis: 45em;
-  flex-shrink: 0;
+  flex: 0 0 45em;
   font-size: 0.8rem;
   padding: 0 3vw;
 }
@@ -266,4 +262,26 @@ h2 ~ p {
   margin: 1em auto 0;
   max-width: 70%;
   text-align: center;
+}
+
+/* COLUMN STYLES - GALLERY */
+.col-three {
+  display: flex;
+  flex: 1;
+}
+.col {
+  box-sizing: border-box;
+  padding: 2em;
+}
+.col-three .col + .col {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+.col-three .col-nav {
+  flex: 0 1 15em;
+}
+.col-three .col-content {
+  flex: 1 1 0;
+}
+.col-three .col-aside {
+  flex: 0 1 20em;
 }
