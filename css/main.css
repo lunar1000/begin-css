@@ -2,9 +2,10 @@
 
 html,
 body {
+  display: flex;
+  flex-direction: column;
   font-family: helvetica, arial, sans;
-  margin: 0;
-  padding: 0;
+  min-height: 100vh;
 }
 html {
   box-shadow: 0 0 0 30px #000 inset;
@@ -85,6 +86,12 @@ p {
   border-left: 1px solid rgb(255 255 255 / 0.3);
   padding-left: 1em;
 }
+/* CONTENT STYLE */
+.content-container {
+  flex-grow: 1;
+  padding-top: 10vh;
+  width: 100%;
+}
 /* FOOTER SYTLE */
 .footer {
   background-color: #000;
@@ -114,14 +121,14 @@ p {
   background-color: #c7dbfc;
   background-size: cover;
   box-sizing: border-box;
-  height: 100vh;
-  padding-top: 10vh;
+  height: 90vh;
+  /* padding-top: 10vh; */
 }
 .full-hero:after {
   border: 10px solid;
   border-color: #fff transparent transparent;
   bottom: 2vh;
-  content: '';
+  content: "";
   height: 0;
   left: 50%;
   position: absolute;
